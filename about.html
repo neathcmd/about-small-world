@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Wildwood</title>
+    <!-- css -->
+    <link rel="stylesheet" href="about.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <!-- font awsome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="container text-center">
+        <h1 class="display-4 mb-4" data-aos="fade-down">About Wildwood</h1>
+        <p class="lead" data-aos="fade-up">
+          Committed to Reforesting Our Planet
+        </p>
+        <a href="./index.html"
+          ><button
+            class="btn btn-light btn-lg"
+            data-aos="fade-up"
+            onclick="showDonateModal()"
+          >
+            Home
+          </button></a
+        >
+      </div>
+    </div>
+
+    <!-- Impact Statistics -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4" data-aos="fade-up">Our Impact</h2>
+      <p class="text-center mb-5 lead text-muted" data-aos="fade-up">
+        Making measurable progress in global forest conservation
+      </p>
+      <div class="row g-4">
+        <!-- Trees Planted -->
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-card p-4 rounded text-center">
+            <i
+              class="fas fa-tree mb-3"
+              style="font-size: 2rem; color: #4caf50"
+            ></i>
+            <div class="counter display-4 mb-2" data-target="1000000">0</div>
+            <h3 class="h5 mb-2">Trees Planted</h3>
+            <p class="small text-muted mb-0">Restoring ecosystems worldwide</p>
+            <div class="progress mt-3" style="height: 5px">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                style="width: 85%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Countries -->
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-card p-4 rounded text-center">
+            <i
+              class="fas fa-globe-americas mb-3"
+              style="font-size: 2rem; color: #2196f3"
+            ></i>
+            <div class="counter display-4 mb-2" data-target="25">0</div>
+            <h3 class="h5 mb-2">Countries</h3>
+            <p class="small text-muted mb-0">Global conservation network</p>
+            <div class="progress mt-3" style="height: 5px">
+              <div
+                class="progress-bar bg-info"
+                role="progressbar"
+                style="width: 65%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Acres Protected -->
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-card p-4 rounded text-center">
+            <i
+              class="fas fa-mountain mb-3"
+              style="font-size: 2rem; color: #795548"
+            ></i>
+            <div class="counter display-4 mb-2" data-target="50000">0</div>
+            <h3 class="h5 mb-2">Acres Protected</h3>
+            <p class="small text-muted mb-0">Preserving natural habitats</p>
+            <div class="progress mt-3" style="height: 5px">
+              <div
+                class="progress-bar bg-warning"
+                role="progressbar"
+                style="width: 75%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Community Partners -->
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-card p-4 rounded text-center">
+            <i
+              class="fas fa-handshake mb-3"
+              style="font-size: 2rem; color: #ff9800"
+            ></i>
+            <div class="counter display-4 mb-2" data-target="100">0</div>
+            <h3 class="h5 mb-2">Community Partners</h3>
+            <p class="small text-muted mb-0">Local collaboration network</p>
+            <div class="progress mt-3" style="height: 5px">
+              <div
+                class="progress-bar bg-primary"
+                role="progressbar"
+                style="width: 90%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Context Section -->
+      <div class="row mt-5">
+        <div class="col-md-8 mx-auto text-center">
+          <p class="text-muted">
+            Our impact grows every day through dedicated conservation efforts
+            and community support.
+          </p>
+          <button
+            class="btn btn-outline-success mt-3"
+            onclick="showImpactDetails()"
+          >
+            Learn More About Our Impact
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission Progress -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4" data-aos="fade-up">Our Progress</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-right">
+          <h5>Reforestation Goal</h5>
+          <div class="progress">
+            <div
+              class="progress-bar bg-success"
+              role="progressbar"
+              style="width: 0%"
+              data-target="75"
+            >
+              0%
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <h5>Community Engagement</h5>
+          <div class="progress">
+            <div
+              class="progress-bar bg-success"
+              role="progressbar"
+              style="width: 0%"
+              data-target="90"
+            >
+              0%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4" data-aos="fade-up">Our Team</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-member text-center">
+            <img
+              src="/api/placeholder/150/150"
+              alt="Team Member"
+              class="mb-3"
+            />
+            <h5>Dr. Sarah Johnson</h5>
+            <p>Conservation Director</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-member text-center">
+            <img
+              src="/api/placeholder/150/150"
+              alt="Team Member"
+              class="mb-3"
+            />
+            <h5>Dr. Michael Chen</h5>
+            <p>Forest Scientist</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-member text-center">
+            <img
+              src="/api/placeholder/150/150"
+              alt="Team Member"
+              class="mb-3"
+            />
+            <h5>Emma Williams</h5>
+            <p>Community Manager</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4" data-aos="fade-up">Our Journey</h2>
+      <div id="timeline" class="d-flex flex-row">
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <h5>2020</h5>
+          <p>Founded Wildwood with a mission to reforest the planet</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <h5>2021</h5>
+          <p>Reached our first 100,000 trees planted milestone</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+          <h5>2022</h5>
+          <p>Expanded operations to 15 countries</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+          <h5>2023</h5>
+          <p>Achieved 1 million trees planted globally</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <div class="container text-center">
+        <h2 class="mb-4" data-aos="fade-up">Join Our Mission</h2>
+        <p class="lead mb-4" data-aos="fade-up">
+          Our mission is to inspire and empower communities to take meaningful
+          action for the conservation and restoration of forests. By raising
+          awareness about the critical role forests play in sustaining life on
+          Earth, we aim to create a global movement that prioritizes
+          reforestation and environmental preservation.
+        </p>
+        <!-- <a href="./index.html"
+          ><button
+            class="btn btn-light btn-lg"
+            data-aos="fade-up"
+            onclick="showDonateModal()"
+          >
+            Your donation
+          </button></a
+        > -->
+      </div>
+    </div>
+
+    <!-- supporters -->
+    <div class="container-fluid animate-on-view pt-4" id="donor-wall">
+      <h2 class="text-center my-5 fw-bold">Our Supporters</h2>
+      <div class="donor-grid">
+        <div class="donor-card animate-card animate-on-view">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtyT6GIEc2u5G9st3QFFqjjZBgPhler4oUKJSiJL0kZbPTDAeMSEqibkgGSZtwdRMuKtg&usqp=CAU"
+            alt="John Doe"
+            class="img-fluid rounded-circle mb-2"
+            style="width: 100px; height: 100px"
+          />
+          <div class="info-donor text-start">
+            <h3 class="text-center fs-5">Emma Green</h3>
+            <p class="fs-6">
+              Thrilled to contribute to forest conservation efforts.
+            </p>
+            <p class="fs-6">Date of Donation: December 28, 2021</p>
+            <p class="fs-6">Location: New York, USA</p>
+          </div>
+        </div>
+        <div class="donor-card animate-card animate-on-view">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZirTv3YUaHSe-VVIQzwXUHXxb8mnJ-krbg&s"
+            alt="Jane Smith"
+            class="img-fluid rounded-circle mb-2"
+            style="width: 100px; height: 100px"
+          />
+          <div class="info-donor text-start">
+            <h3 class="text-center fs-5">Liam Woods</h3>
+            <p class="fs-6">
+              Forests are the lungs of our planet. Let’s save them together.
+            </p>
+            <p class="fs-6">Date of Donation: January 2, 2022</p>
+            <p class="fs-6">Location: London, UK</p>
+          </div>
+        </div>
+        <div class="donor-card animate-card animate-on-view">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToT7cZ-FaEH5FrdGblHF-d6jkCESxM0bcE7HqwOi1kL1tSRCqSOEAR8OAmxCW-ocl_1-Y&usqp=CAU"
+            alt="Jane Smith"
+            class="img-fluid rounded-circle mb-2"
+            style="width: 100px; height: 100px"
+          />
+          <div class="info-donor text-start">
+            <h3 class="text-center fs-5">Sofia Rivera</h3>
+            <p class="fs-6">Proud to be a part of this noble cause!</p>
+            <p class="fs-6">Date of Donation: December 15, 2024</p>
+            <p class="fs-6">Location: Sydney, Australia</p>
+          </div>
+        </div>
+        <div class="donor-card animate-card animate-on-view">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP4Xnsq7Q5E_6Hs67VKLlm3oF1cEeDU8QazoLtmr27tCHuHSSVgVkrm9aCvusUUXQl_FM&usqp=CAU"
+            alt="Jane Smith"
+            class="img-fluid rounded-circle mb-2"
+            style="width: 100px; height: 100px"
+          />
+          <div class="info-donor text-start">
+            <h3 class="text-center fs-5">Ethan Patel</h3>
+            <p class="fs-6">Every small effort counts. Let’s protect nature.</p>
+            <p class="fs-6">Date of Donation: December 8, 2024</p>
+            <p class="fs-6">Location: Tokyo, Japan</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Donation Modal -->
+      <div class="modal fade" id="donationModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Make a Donation</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="donationForm">
+                <div class="mb-3">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Location</label>
+                  <input type="text" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Amount</label>
+                  <select class="form-select" required>
+                    <option value="10">Plant 10 Trees ($10)</option>
+                    <option value="25">Plant 25 Trees ($25)</option>
+                    <option value="50">Plant 50 Trees ($50)</option>
+                    <option value="100">Plant 100 Trees ($100)</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Message (Optional)</label>
+                  <textarea class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success w-100">
+                  Complete Donation
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="donateModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Support Our Work</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="donateForm">
+              <div class="mb-3">
+                <label class="form-label">Donation Amount</label>
+                <select class="form-select" id="donationAmount">
+                  <option value="10">Plant 10 Trees ($10)</option>
+                  <option value="25">Plant 25 Trees ($25)</option>
+                  <option value="50">Plant 50 Trees ($50)</option>
+                  <option value="100">Plant 100 Trees ($100)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-success w-100">
+                Donate
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="about.js"></script>
+  </body>
+</html>

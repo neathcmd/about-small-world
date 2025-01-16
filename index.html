@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wildwood</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header
+      class="animate-on-view"
+      style="
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 200;
+        background-color: #144c1a;
+      "
+    >
+      <nav class="navbar navbar-expand-lg navbar-light ms-5 me-5" id="nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Wildwood</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navbar-padding" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-4">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#introduction">Introduction</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#trees">Trees</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#seeds">Seeds</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#donor-wall">Supporters</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="text-center animate-on-scroll">
+      <div class="background-slider">
+        <div class="fade-slide"></div>
+        <div class="fade-slide"></div>
+        <div class="fade-slide"></div>
+      </div>
+      <div class="container">
+        <h1 class="text-white">Help Us Reforest the Planet</h1>
+        <p class="text-white">
+          Forests are vital for providing clean air, regulating the climate, and
+          supporting small world company donating to protect them helps combat
+          climate change and preserve essential ecosystems for future
+          generations.
+        </p>
+        <a href="#donate"
+          ><button
+            type="button"
+            class="btn btn-warning btn-lg fw-medium"
+            style="color: #fff"
+            data-bs-toggle="modal"
+            data-bs-target="#donationModal"
+          >
+            Donate Now
+          </button></a
+        >
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="both my-2">
+      <div class="container">
+        <div class="intro-text align-items-start gap-4">
+          <div
+            class="text animate-on-scroll text-slide d-flex align-items-start flex-column"
+          >
+            <h2 class="text-start">Why Forests Matter</h2>
+            <p class="text-start">
+              Forests are vital to life on Earth. They provide clean air,
+              regulate the climate, and support countless species, including
+              humans. Protecting forests is crucial for biodiversity, combating
+              climate change, and ensuring a sustainable future for all.
+            </p>
+            <p class="text-start">
+              By supporting reforestation efforts, you help restore ecosystems,
+              protect wildlife, and mitigate the effects of deforestation.
+            </p>
+          </div>
+          <div class="image animate-on-scroll image-slide">
+            <img
+              src="https://opendevelopmentcambodia.net/wp-content/uploads/2016/01/12716144895_47c9798eae_k.jpg"
+              alt="Forest Image 1"
+              class="slideshow-image"
+              style="width: 95%"
+            />
+            <img
+              src="https://media.istockphoto.com/id/854086988/photo/jungle-tree.jpg?s=612x612&w=0&k=20&c=S5RaMOW-1nbdNzqXccJs0q7lvuIOqEb8vmLa1ANKCRQ="
+              alt="Forest Image 2"
+              class="slideshow-image"
+              style="width: 95%"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="both my-2">
+      <div class="container">
+        <div class="intro-text gap-4">
+          <div
+            class="text animate-on-scroll text-slide d-flex align-items-start flex-column"
+          >
+            <h2 class="text-start">About Us</h2>
+            <p class="text-start">
+              Welcome to Small World Company, where we believe that every tree
+              planted is a step toward a healthier, greener planet.
+            </p>
+
+            <p class="text-start">
+              Forests are the lungs of our planet, filtering the air we breathe,
+              regulating water cycles, and providing a habitat for countless
+              species. However, deforestation and climate change threaten these
+              vital ecosystems.
+            </p>
+
+            <a href="./about.html" class="learn-btn">Learn more</a>
+          </div>
+          <style>
+            .learn-btn {
+              background-color: #144c1a;
+              border-radius: 7px;
+              color: #fff;
+              text-decoration: none;
+              text-align: center;
+              padding: 10px 30px;
+            }
+          </style>
+          <div class="image animate-on-scroll image-slide">
+            <img
+              src="https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2023/07/12123124/Forest-Conservation-Act-1980-1634162729429.jpg"
+              alt="Forest Image 1"
+              class="slideshow-image"
+              style="width: 98%"
+            />
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/012/723/494/large_2x/handing-over-a-tree-in-human-hands-forest-conservation-concept-protection-and-conservation-of-resources-plant-trees-to-reduce-global-warming-use-renewable-energy-conservation-of-natural-forests-free-photo.jpg"
+              alt="Forest Image 2"
+              class="slideshow-image"
+              style="width: 98%"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--our vision section-->
+    <section id="vision">
+      <div class="out-mission-container d-flex align-items-center">
+        <div class="mission-content text-center animate-on-scroll text-slide">
+          <h1 class="text-white">Our Vision</h1>
+          <p class="text-white">
+            We envision a world where lush, thriving forests flourish across
+            continents, nurturing biodiversity, combating climate change, and
+            enhancing the well-being of all living beings. Through
+            collaboration, education, and innovation, we strive to be a driving
+            force behind the global effort to restore the balance between
+            humanity and nature.
+          </p>
+          <a href="./about.html" class="learn-btn">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tree Section -->
+    <section id="trees" class="animate-on-view">
+      <div class="container">
+        <h2 class="text-center my-5">How Trees Combat Climate Change</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://www.thegaragespecialist.com/wp-content/uploads/2022/05/oak-tree-in-full-leaf-standing-alone-in-a-field-in-summer-against-a-white-background-1024x683.jpg"
+                class="card-img-top"
+                alt="Tree 1"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Oak Tree</h5>
+                <h5 class="fs-5">(Quercus robur)</h5>
+                <p class="card-text">
+                  Oak trees are known for their strength and longevity. They
+                  provide excellent shade and can support a variety of wildlife,
+                  including birds and insects. The wood is used in furniture and
+                  flooring due to its durability. Oaks also improve soil quality
+                  by enhancing nitrogen content.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjI9pG2ntPwzRptiOegesEWPJNspQae6Rhyphenhyphen2Ia42XWWQc2TfoIVhTdnzagP-fCh6AyrdLdINXf2_NOoC4BnyUtJYDmzffC-AHs0AuOBweYo_nBhgSO9Hk_jQQESWQLbwU15ec4U5A9NI_fV/s1600/596e84645d182f6a486d74a84ccd66.jpg"
+                class="card-img-top"
+                alt="Tree 2"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Banyan Tree</h5>
+                <h5 class="fs-5">(Ficus benghalensis)</h5>
+                <p class="card-text">
+                  The banyan tree is a symbol of longevity and strength, with
+                  its aerial roots that form new trunks. It offers cooling
+                  shade, reduces air pollution, and serves as an important
+                  habitat for birds and small animals. Banyans also contribute
+                  to reducing carbon dioxide levels in the air.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://cdn.mos.cms.futurecdn.net/vvUydgY3JGpDQ8aXNRAHtM.jpg"
+                class="card-img-top"
+                alt="Tree 3"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Maple Tree</h5>
+                <h5 class="fs-5">(Acer spp.)</h5>
+                <p class="card-text">
+                  Maple trees are known for their striking fall foliage and
+                  sweet sap, which is used to make maple syrup. These trees help
+                  improve air quality and provide habitat for various species.
+                  Maple wood is also highly valued for its strength and fine
+                  grain, often used in cabinetry and flooring in homes and
+                  other.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/pine-tree-in-spring-borchee.jpg"
+                class="card-img-top"
+                alt="Tree 4"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Pine Tree</h5>
+                <h5 class="fs-5">(Pinus spp.)</h5>
+                <p class="card-text">
+                  Pine trees are evergreen conifers that provide year-round
+                  greenery. They are essential in stabilizing soil, preventing
+                  erosion, and creating habitats for wildlife. Pine needles
+                  decompose to enrich soil, and their wood is valuable in
+                  construction and paper products, contributing to the economy.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://media.npr.org/assets/img/2018/06/10/gettyimages-157863121-50_custom-289ae9d453e14833aaf8394690778e5858877f7f.jpg"
+                class="card-img-top"
+                alt="Tree 5"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Baobab Tree</h5>
+                <h5 class="fs-5">(Adansonia)</h5>
+                <p class="card-text">
+                  The baobab, often called the "Tree of Life," is known for its
+                  massive trunk and longevity. It provides valuable resources,
+                  including water stored in its trunk and nutrient-rich fruit.
+                  Baobabs also help maintain soil fertility and support
+                  wildlife, particularly in arid regions by providing shelter.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://media.istockphoto.com/id/637738128/photo/teak-garden.jpg?s=612x612&w=0&k=20&c=fJZPI3qWPEZ-ee1mwQaRae968rfYfu0DDyi3Ky04qeM="
+                class="card-img-top"
+                alt="Tree 6"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Teak Tree</h5>
+                <h5 class="fs-5">(Tectona grandis)</h5>
+                <p class="card-text">
+                  Teak is a highly prized hardwood tree, valued for its
+                  durability and resistance to pests. It grows in tropical
+                  regions and plays a role in maintaining biodiversity. Teak
+                  wood is used extensively in furniture, flooring, and
+                  shipbuilding. Its leaves also improve soil fertility and all
+                  the things on earth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seed Section -->
+    <section id="seeds" class="animate-on-view">
+      <div class="container">
+        <h2 class="text-center my-5">
+          How Seeds are Important and contribute to The World
+        </h2>
+        <div class="row">
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://cdn.mos.cms.futurecdn.net/EMr5ZSaH9vLT7QunEH2S68.jpg"
+                class="card-img-top"
+                alt="Tree 1"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Acacia Seed</h5>
+                <p class="card-text">
+                  Acacia seeds are vital for reforestation in arid regions, as
+                  they are drought-resistant and help improve soil fertility.
+                  These seeds support the growth of nitrogen-fixing plants,
+                  enriching the soil and promoting biodiversity. Acacia trees
+                  also help stabilize soil, reduce erosion, and provide shelter
+                  for wildlife.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://chefsmandala.com/wp-content/uploads/2018/05/Pine-Nuts.jpg"
+                class="card-img-top"
+                alt="Tree 2"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Pine Seed</h5>
+                <p class="card-text">
+                  Pine seeds are crucial for forest restoration in temperate
+                  climates. Pine trees grow quickly and help stabilize soil.
+                  They are often used in reforestation projects to improve
+                  ecosystem resilience, providing habitat for wildlife and
+                  increasing oxygen levels. Their needles also enrich the soil
+                  and support other plant species.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://i.ytimg.com/vi/CfKIF9S2uyQ/mqdefault.jpg"
+                class="card-img-top"
+                alt="Tree 3"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Mangrove Seed</h5>
+                <p class="card-text">
+                  Mangrove seeds are essential for coastal reforestation,
+                  particularly in tropical and subtropical regions. Mangroves
+                  protect shorelines from erosion, provide habitat for marine
+                  species, and act as carbon sinks. These seeds help restore
+                  critical coastal ecosystems, protect biodiversity, and combat
+                  the effects of climate change.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5jltQhBFGPxb523O-GsidS5ulkysJx7rrLg&s"
+                class="card-img-top"
+                alt="Tree 4"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Mango Seed</h5>
+                <p class="card-text">
+                  Mango seeds contribute to reforestation in tropical areas,
+                  enhancing biodiversity and providing fruit for local wildlife.
+                  Mango trees also stabilize soil, reduce erosion, and act as
+                  windbreaks. By restoring mangrove ecosystems and promoting
+                  sustainable agriculture, these seeds help communities adapt to
+                  climate change and creating.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRflItkEHba2cla044xOGlpPNdjAVN_3RwnrA&s"
+                class="card-img-top"
+                alt="Tree 5"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Oak Seed</h5>
+                <p class="card-text">
+                  Oak seeds play a vital role in temperate reforestation, as oak
+                  trees are long-lived and support diverse ecosystems. They
+                  provide shelter for birds, mammals, and insects. Oak forests
+                  enhance soil quality, increase carbon sequestration, and
+                  contribute to watershed protection, ensuring healthy
+                  ecosystems and biodiversity in forested regions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 animate-card animate-on-view">
+            <div class="card">
+              <img
+                src="https://aduna.com/cdn/shop/articles/Aduna_Baobab_Fruit___Pot_95557b81-ad6e-4f63-96ee-5df323e49ecf.jpg?v=1721054360&width=2048"
+                class="card-img-top"
+                alt="Tree 6"
+              />
+              <div class="card-body text-start">
+                <h5 class="card-title fs-3">Baobab Seed</h5>
+                <p class="card-text">
+                  Baobab seeds are important for reforestation in dry, African
+                  regions. These trees provide critical resources such as water,
+                  fruit, and shelter for animals. Baobabs help prevent soil
+                  erosion and contribute to sustainable agriculture. Their seeds
+                  promote the restoration of degraded land and improve the
+                  livelihoods of local communities such as the world.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Form -->
+    <section id="donate" style="margin-left: 30px">
+      <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="">
+            <div class="">
+              <h5 class="card-title fs-2 mt-5 mb-4" style="text-align: center">
+                Please Donation
+              </h5>
+              <form id="user-form">
+                <div id="passwordHelpBlock" class="form-text mt-4">
+                  <label for="" class="form-label text-black">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="passwordHelpBlock"
+                    placeholder="Your Email"
+                  />
+                </div>
+
+                <div id="passwordHelpBlock" class="form-text mt-4">
+                  <label for="inputPassword5" class="form-label text-black"
+                    >Phone</label
+                  >
+                  <input
+                    type="number"
+                    id="number"
+                    class="form-control"
+                    aria-describedby="passwordHelpBlock"
+                    placeholder="Phone Number"
+                  />
+                </div>
+
+                <div id="asswordHelpBlock" class="form-text mt-4">
+                  <label for="inputPassword5" class="form-label text-black"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    id="first-name"
+                    class="form-control"
+                    aria-describedby="passwordHelpBlock"
+                    placeholder="First Name"
+                  />
+                </div>
+
+                <div id="asswordHelpBlock" class="form-text mt-4">
+                  <label for="inputPassword5" class="form-label text-black"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    id="last-name"
+                    class="form-control"
+                    aria-describedby="passwordHelpBlock"
+                    placeholder="Last Name"
+                  />
+                </div>
+
+                <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                  <button class="btn btn-success" type="submit">Donate</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-container">
+            <div class="form-logo" p-4>
+              <div class="image-on-text">
+                <!-- <h5 class="card-title text-center">
+                  Your generous donation supports meaningful causes, making a
+                  positive impact and fostering change for all.
+                </h5> -->
+                <img src="./img/forest-removebg-preview 1.png" width="200" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .image-on-text {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnEgsuPtJ2kfLr1uJR8v_-T-s795SMryOnFw&s ")
+            no-repeat center center/cover;
+        color: white;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    </style>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-light py-5 animate-faq">
+      <div class="container-fluid">
+        <h2 class="text-center">FAQ</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+                aria-expanded="true"
+                aria-controls="collapse1"
+              >
+                What is reforestation?
+              </button>
+            </h2>
+            <div
+              id="collapse1"
+              class="accordion-collapse collapse show text-start"
+              aria-labelledby="faq1"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Reforestation is the process of planting trees in deforested
+                areas.
+              </div>
+              <div class="accordion-body">
+                It involves restoring forests to promote biodiversity, carbon
+                sequestration, and health.
+              </div>
+              <div class="accordion-body">
+                Reforestation aims to replenish ecosystems, reduce soil erosion,
+                and improve habitats.
+              </div>
+              <div class="accordion-body">
+                This practice helps mitigate climate change by absorbing carbon
+                dioxide effectively.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="container-fluid" style="background-color: #144c1a">
+      <footer class="py-5">
+        <div class="row text-light">
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="fs-4 fw-bold">Quicklink</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="fs-4 fw-bold">About us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="fs-4 fw-bold">Contact us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Phone</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Email</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Whatsapp</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Yahoo</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">+855 092824223</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h1 class="fw-bold text-warning">Subscribe to our Community</h1>
+              <p style="color: #fff">
+                Monthly digest of what's new and exciting from us.
+              </p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button type="button" class="btn btn-outline-warning">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top text-light"
+        >
+          <p style="color: #fff">© 2024 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex gap-3 fs-2" style="cursor: pointer">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
