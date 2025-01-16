@@ -257,48 +257,48 @@ function updateDonorStats() {
 }
 
 // Handle donation form submission
-document
-  .getElementById("donationForm")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
+// document
+//   .getElementById("donationForm")
+//   .addEventListener("submit", function (e) {
+//     e.preventDefault();
 
-    // Show loading state
-    document.querySelector(".loading-spinner").style.display = "flex";
+//     // Show loading state
+//     document.querySelector(".loading-spinner").style.display = "flex";
 
-    // Simulate processing
-    setTimeout(() => {
-      document.querySelector(".loading-spinner").style.display = "none";
-      bootstrap.Modal.getInstance(
-        document.getElementById("donationModal")
-      ).hide();
+//     // Simulate processing
+//     setTimeout(() => {
+//       document.querySelector(".loading-spinner").style.display = "none";
+//       bootstrap.Modal.getInstance(
+//         document.getElementById("donationModal")
+//       ).hide();
 
-      // Add new donor card with animation
-      addNewDonor({
-        name: this.querySelector('input[type="text"]').value,
-        location: this.querySelector('input[type="text"]:nth-of-type(2)').value,
-        amount: this.querySelector("select").value,
-        message: this.querySelector("textarea").value,
-      });
-    }, 1500);
-  });
+//       // Add new donor card with animation
+//       addNewDonor({
+//         name: this.querySelector('input[type="text"]').value,
+//         location: this.querySelector('input[type="text"]:nth-of-type(2)').value,
+//         amount: this.querySelector("select").value,
+//         message: this.querySelector("textarea").value,
+//       });
+//     }, 1500);
+//   });
 
-function addNewDonor(donor) {
-  const card = createDonorCard(donor);
-  document.querySelector(".donor-grid").prepend(card);
-  card.classList.add("new-donor", "slide-in");
-  updateDonorStats();
-}
+// function addNewDonor(donor) {
+//   const card = createDonorCard(donor);
+//   document.querySelector(".donor-grid").prepend(card);
+//   card.classList.add("new-donor", "slide-in");
+//   updateDonorStats();
+// }
 
-function createDonorCard(donor) {
-  const card = document.createElement("div");
-  card.className = "donor-card";
-  card.dataset.date = new Date().toISOString();
-  card.dataset.amount = donor.amount;
-  card.innerHTML = `
-    <h3>${donor.name}</h3>
-    <p>${donor.location}</p>
-    <p>$${donor.amount}</p>
-    <p>${donor.message}</p>
-  `;
-  return card;
-}
+// function createDonorCard(donor) {
+//   const card = document.createElement("div");
+//   card.className = "donor-card";
+//   card.dataset.date = new Date().toISOString();
+//   card.dataset.amount = donor.amount;
+//   card.innerHTML = `
+//     <h3>${donor.name}</h3>
+//     <p>${donor.location}</p>
+//     <p>$${donor.amount}</p>
+//     <p>${donor.message}</p>
+//   `;
+//   return card;
+// }
