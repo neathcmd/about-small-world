@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 :root {
   --primary-green: #1a472a;
   --secondary-green: #2d5a3c;
