@@ -16,69 +16,23 @@ document.getElementById("user-form").addEventListener("submit", (e) => {
   const lastName = document.getElementById("last-name").value.trim();
 
   if (!email && !number && !firstName && !lastName) {
-    alert("Please fill out your information");
+    alert("please fill out your information");
   }
   // Email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    alert("Please enter a valid email.");
+    alert("Please fill your email.");
     return;
   }
+
   //number validation
   if (number.length < 7 || number.length > 15) {
     alert("Please enter your phone number");
     return;
   }
+
   alert("Thank you so much");
 });
-
-//interactive donate button
-// document.querySelectorAll(".btn-warning").forEach((button) => {
-//   button.addEventListener("click", function (e) {
-//     const rect = this.getBoundingClientRect();
-//     const ripple = document.createElement("span");
-
-//     // Set the ripple position and size
-//     const size = Math.max(rect.width, rect.height);
-//     ripple.style.width = ripple.style.height = `${size}px`;
-//     ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
-//     ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
-
-//     ripple.classList.add("ripple");
-
-//     // Append the ripple effect to the button
-//     this.appendChild(ripple);
-
-//     // Remove the ripple after the animation
-//     ripple.addEventListener("animationend", () => {
-//       ripple.remove();
-//     });
-//   });
-// });
-
-// interactive donate button in the form
-// document.querySelectorAll(".btn-warning, .btn-primary").forEach((button) => {
-//   button.addEventListener("click", function (e) {
-//     const rect = this.getBoundingClientRect();
-//     const ripple = document.createElement("span");
-
-//     // Set the ripple position and size
-//     const size = Math.max(rect.width, rect.height);
-//     ripple.style.width = ripple.style.height = `${size}px`;
-//     ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
-//     ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
-
-//     ripple.classList.add("ripple");
-
-//     // Append the ripple effect to the button
-//     this.appendChild(ripple);
-
-//     // Remove the ripple after the animation
-//     ripple.addEventListener("animationend", () => {
-//       ripple.remove();
-//     });
-//   });
-// });
 
 // about section Function to check if an element is in the viewport
 function isInViewport(element) {
@@ -104,6 +58,84 @@ window.addEventListener("scroll", handleScroll);
 
 // Initial check
 handleScroll();
+
+//image slide show for about section
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".slideshow-image");
+  let currentIndex = 0;
+
+  // Hide all images except the first one
+  images.forEach((image, index) => {
+    image.style.opacity = index === 0 ? "1" : "0";
+    image.style.transition = "opacity 1s ease-in-out";
+  });
+
+  // Function to show the next image
+  const showNextImage = () => {
+    images[currentIndex].style.opacity = "0"; // Hide the current image
+    currentIndex = (currentIndex + 1) % images.length; // Move to the next image
+    images[currentIndex].style.opacity = "1"; // Show the next image
+  };
+
+  // Set an interval to call the function every 3 seconds
+  setInterval(showNextImage, 3000);
+});
+
+//about read more
+document.addEventListener("DOMContentLoaded", () => {
+  const readMoreBtn = document.getElementById("read-more-btn");
+  const expandableSection = document.getElementById("expandable-section");
+  let isExpanded = false;
+
+  const toggleContent = () => {
+    isExpanded = !isExpanded;
+
+    if (isExpanded) {
+      // Expand content
+      expandableSection.classList.add("expanded");
+      readMoreBtn.textContent = "Read Less";
+      readMoreBtn.setAttribute("aria-expanded", "true");
+    } else {
+      // Collapse content
+      expandableSection.classList.remove("expanded");
+      readMoreBtn.textContent = "Read More";
+      readMoreBtn.setAttribute("aria-expanded", "false");
+    }
+  };
+
+  // Initialize button state
+  readMoreBtn.setAttribute("aria-expanded", "false");
+
+  // Add click event listener
+  readMoreBtn.addEventListener("click", toggleContent);
+
+  // Add keyboard accessibility
+  readMoreBtn.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleContent();
+    }
+  });
+});
+
+// Optional: Add intersection observer for animation when scrolling into view
+const readMoreScrollOptions = {
+  threshold: 0.2,
+  rootMargin: "50px",
+};
+
+const readMoreScrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-in");
+      readMoreScrollObserver.unobserve(entry.target);
+    }
+  });
+}, readMoreScrollOptions);
+
+document.querySelectorAll(".animate-on-scroll").forEach((element) => {
+  readMoreScrollObserver.observe(element);
+});
 
 //Introduction-slide-in
 document.addEventListener("DOMContentLoaded", () => {
@@ -178,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentIndex = 0;
 
-  // Change slides
+  // Change slides with slower interval
   setInterval(() => {
     slides.forEach((slide, index) => {
       slide.classList.remove("active");
@@ -188,11 +220,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     currentIndex = (currentIndex + 1) % images.length;
-  }, 2700);
+  }, 2000); // Slower interval of 5 seconds
 });
 
-// Select the FAQ section
-const faqSection = document.querySelector("#faq");
+// Select all FAQ sections with the animate-faq class
+const faqSections = document.querySelectorAll(".animate-faq");
 
 // Create an Intersection Observer
 const observer = new IntersectionObserver(
@@ -200,18 +232,20 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         // Add the 'visible' class when in view
-        faqSection.classList.add("visible");
-      } else {
-        // Remove the 'visible' class when out of view (optional)
-        faqSection.classList.remove("visible");
+        entry.target.classList.add("visible");
+        // Stop observing after animation is triggered (optional)
+        // observer.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.1 }
+  {
+    threshold: 0.1,
+    rootMargin: "50px", // Triggers slightly before the element comes into view
+  }
 );
 
-// Observe the FAQ section
-observer.observe(faqSection);
+// Observe all FAQ sections
+faqSections.forEach((section) => observer.observe(section));
 
 // Select the Vision section
 const visionSection = document.querySelector("#vision");
